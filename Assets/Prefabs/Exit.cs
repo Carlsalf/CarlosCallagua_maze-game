@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class Floor : MonoBehaviour
+public class Exit : MonoBehaviour
 {
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 }
