@@ -8,7 +8,14 @@ public class Exit : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            winText.SetActive(true);
+            Debug.Log("GANASTE");
+
+            if (winText != null)
+            {
+                winText.SetActive(true);
+            }
+
+            Time.timeScale = 0f;
         }
     }
 }

@@ -7,6 +7,7 @@ public class BallController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         rb = GetComponent<Rigidbody>();
     }
 
