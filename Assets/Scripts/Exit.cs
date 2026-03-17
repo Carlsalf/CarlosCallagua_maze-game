@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-
-    }
-
-    void Update()
-    {
-
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("GANASTE ");
+        }
     }
 }
