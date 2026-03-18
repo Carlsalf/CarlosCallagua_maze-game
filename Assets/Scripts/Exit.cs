@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
-    public GameObject winPanel;
-
     private bool hasWon = false;
 
     private void OnTriggerEnter(Collider other)
@@ -11,15 +9,12 @@ public class Exit : MonoBehaviour
         if (other.CompareTag("Player") && !hasWon)
         {
             hasWon = true;
-
             Debug.Log("GANASTE");
 
-            if (winPanel != null)
+            if (GameManager.Instance != null)
             {
-                winPanel.SetActive(true);
+                GameManager.Instance.WinLevel();
             }
-
-            Time.timeScale = 0f;
         }
     }
 }
